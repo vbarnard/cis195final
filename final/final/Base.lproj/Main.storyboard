@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jnb-zf-bla">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="coF-9B-0O6">
+            <objects>
+                <navigationController id="jnb-zf-bla" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eIF-Wx-5Mf">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="z4d-jR-VtV" kind="relationship" relationship="rootViewController" id="2g1-Bt-K08"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uoB-b6-YqU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-483" y="362"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="xtX-8c-Imn">
+            <objects>
+                <viewController id="z4d-jR-VtV" customClass="Home" customModule="final" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="irf-Mf-WOT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="xsA-1G-sjO">
+                                <rect key="frame" x="52.5" y="243" width="309" height="37"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="24"/>
+                                <state key="normal" title="National Park Full Name">
+                                    <color key="titleColor" systemColor="systemGreenColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="2YO-2E-YxK" kind="show" identifier="fullname" id="bVT-Hr-Xmn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="d4a-ef-LRa">
+                                <rect key="frame" x="44" y="539" width="326" height="37"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="24"/>
+                                <state key="normal" title="National Park Description">
+                                    <color key="titleColor" systemColor="systemGreenColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="2YO-2E-YxK" kind="show" identifier="description" id="W4a-78-30v"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jlg-m5-ksT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="d4a-ef-LRa" firstAttribute="top" secondItem="xsA-1G-sjO" secondAttribute="bottom" constant="259" id="KBp-zN-J58"/>
+                            <constraint firstItem="d4a-ef-LRa" firstAttribute="centerX" secondItem="jlg-m5-ksT" secondAttribute="centerX" id="RCQ-r9-EQj"/>
+                            <constraint firstItem="xsA-1G-sjO" firstAttribute="centerX" secondItem="jlg-m5-ksT" secondAttribute="centerX" id="acZ-Eh-yNN"/>
+                            <constraint firstItem="xsA-1G-sjO" firstAttribute="top" secondItem="jlg-m5-ksT" secondAttribute="top" constant="155" id="zNU-Yc-EEO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="kGJ-XY-NY4">
+                        <barButtonItem key="leftBarButtonItem" title="Instructions" id="OTy-Pu-z3e">
+                            <connections>
+                                <segue destination="5le-wZ-V7r" kind="show" id="Pv5-i5-wQr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7bo-Qe-ubK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="258" y="362"/>
+        </scene>
+        <!--Predictions-->
+        <scene sceneID="mba-Nh-hNx">
+            <objects>
+                <tableViewController id="2YO-2E-YxK" customClass="Table" customModule="final" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="VGN-BQ-q4P">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="1" textLabel="Xxy-tc-BPo" rowHeight="100" style="IBUITableViewCellStyleDefault" id="EDQ-10-9hQ">
+                                <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EDQ-10-9hQ" id="WCv-He-YF7">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Xxy-tc-BPo">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="2YO-2E-YxK" id="Wu2-2U-Zfb"/>
+                            <outlet property="delegate" destination="2YO-2E-YxK" id="OZD-15-Gue"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Predictions" id="HQg-FP-WJ7"/>
+                    <connections>
+                        <outlet property="table" destination="VGN-BQ-q4P" id="DPp-Fq-N66"/>
+                        <segue destination="z34-eo-TW7" kind="show" identifier="single" id="wTz-Wd-WCG"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UCo-ik-A9O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="979.71014492753636" y="361.60714285714283"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Qg5-Dp-dSR">
+            <objects>
+                <navigationController id="5le-wZ-V7r" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="zhA-6C-xs5"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eAf-yJ-9lz">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="62p-zF-mTc" kind="relationship" relationship="rootViewController" id="1Hd-xM-hya"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f2R-FV-pyg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-528" y="-367"/>
+        </scene>
+        <!--Instructions-->
+        <scene sceneID="rgS-pU-AyQ">
+            <objects>
+                <viewController id="62p-zF-mTc" customClass="Instructions" customModule="final" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R8S-1U-AdK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PTV-AN-hCN">
+                                <rect key="frame" x="41" y="154" width="332" height="642"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="642" id="lif-rd-1KA"/>
+                                    <constraint firstAttribute="width" constant="332" id="mot-em-zwJ"/>
+                                </constraints>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hU1-Xo-cZM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PTV-AN-hCN" firstAttribute="centerY" secondItem="hU1-Xo-cZM" secondAttribute="centerY" id="Le9-b8-KqR"/>
+                            <constraint firstItem="PTV-AN-hCN" firstAttribute="centerX" secondItem="hU1-Xo-cZM" secondAttribute="centerX" id="TOF-7g-Izx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="BV7-0K-jX6"/>
+                    <connections>
+                        <outlet property="txt" destination="PTV-AN-hCN" id="5HO-rQ-GAj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nws-zA-kp2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="231.8840579710145" y="-367.63392857142856"/>
+        </scene>
+        <!--Single-->
+        <scene sceneID="vKx-Qg-Rev">
+            <objects>
+                <viewController id="z34-eo-TW7" customClass="Single" customModule="final" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="moU-x6-eJZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KyS-ob-OgX">
+                                <rect key="frame" x="56.5" y="157.5" width="301" height="635"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="301" id="TaQ-HP-r6i"/>
+                                    <constraint firstAttribute="height" constant="635" id="s99-Go-vpT"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vdP-qh-SbG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KyS-ob-OgX" firstAttribute="centerY" secondItem="vdP-qh-SbG" secondAttribute="centerY" id="BAp-Rt-Jsv"/>
+                            <constraint firstItem="KyS-ob-OgX" firstAttribute="centerX" secondItem="vdP-qh-SbG" secondAttribute="centerX" id="BOI-AV-RgJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vLQ-8B-DLz"/>
+                    <connections>
+                        <outlet property="txt" destination="KyS-ob-OgX" id="2hG-Uq-mV3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7N7-r9-8oD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1715.9420289855075" y="361.60714285714283"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="bVT-Hr-Xmn"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
